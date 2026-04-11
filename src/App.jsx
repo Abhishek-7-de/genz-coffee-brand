@@ -35,11 +35,23 @@ function Hero() {
           <button className="btn btn-primary">Shop Now</button>
 
           <div className="hero-visual">
-            <motion.div 
-              className="hero-can"
-              animate={{ rotateY: [0, 10, -10, 0] }}
+            <motion.div
+              className="hero-image-wrapper"
+              animate={{ 
+                y: [0, -15, 0],
+                rotateZ: [0, 2, -2, 0],
+                rotateY: [-5, 10, -5]
+              }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             >
+              <motion.img 
+                src="/sachet-mockup.png" 
+                alt="PROFFE Sachet Mockup" 
+                className="hero-mockup-img"
+                whileHover={{ scale: 1.05, rotateZ: 0, rotateY: 0 }}
+                transition={{ duration: 0.4 }}
+              />
+              <div className="hero-shadow"></div>
             </motion.div>
           </div>
         </motion.div>

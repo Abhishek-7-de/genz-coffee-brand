@@ -212,26 +212,35 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
 }
 
-.hero-can {
-  width: 200px;
-  height: 320px;
-  background: linear-gradient(145deg, var(--roast), #2A1005);
-  border-radius: 20px;
-  border: 4px solid #4A2010;
+.hero-image-wrapper {
   position: relative;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  perspective: 1000px;
+  transform-style: preserve-3d;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-.hero-can::before {
-  content: 'PROFFE';
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: var(--cream);
-  transform: rotate(-90deg);
-  letter-spacing: 2px;
+
+.hero-mockup-img {
+  width: 320px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 40px rgba(196,92,26,0.3);
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid rgba(250, 243, 224, 0.1);
+  transform: translateZ(50px);
+}
+
+.hero-shadow {
+  width: 200px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 70%);
+  margin-top: -10px;
+  border-radius: 50%;
+  filter: blur(5px);
+  z-index: 1;
 }
 
 /* Split Hook */
