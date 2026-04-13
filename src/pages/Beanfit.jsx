@@ -65,14 +65,13 @@ export default function BeafitPage() {
             <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.6}}>
               <h2 className="section-title">The Beanfit.</h2>
               <p className="section-desc" style={{marginBottom:32}}>
-                The name positions itself at the meeting point of two ideas: <strong style={{color:'rgba(240,235,227,0.9)'}}>The Bean</strong> — the origin of every great coffee — 
-                and <strong style={{color:'rgba(240,235,227,0.9)'}}>Fit</strong> — functional nutrition for an active lifestyle. 
-                Together: a brand that earns its place in your morning ritual.
+                The name positions itself exactly at the meeting point of two core ideas. <strong style={{color:'rgba(240,235,227,0.9)'}}>The Bean</strong> represents the origin of every great coffee, 
+                while <strong style={{color:'rgba(240,235,227,0.9)'}}>Fit</strong> highlights functional nutrition for an active lifestyle. 
+                Together they create a brand that naturally earns its place in a daily morning ritual.
               </p>
               <p className="section-desc">
-                The <strong style={{color:'rgba(240,235,227,0.9)'}}>"bf" oval monogram</strong> references the coffee bean shape, embedding the brand identity 
-                into its most fundamental ingredient. The classic serif wordmark signals craft, quality, 
-                and permanence — not a trend, a standard.
+                The <strong style={{color:'rgba(240,235,227,0.9)'}}>"bf" oval monogram</strong> intentionally references the shape of a coffee bean. This embeds the core brand identity 
+                right into its most fundamental ingredient. The classic serif wordmark is there to signal craft and premium quality. It feels permanent instead of just being a fleeting trend.
               </p>
             </motion.div>
             <motion.div initial={{opacity:0,x:30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.6}}>
@@ -87,13 +86,24 @@ export default function BeafitPage() {
                 <img src="/beanfit-logo.png" alt="The Beanfit Logo — Light Display" style={{maxWidth:280}} />
               </div>
               {/* Colours */}
-              <div style={{marginTop:24, display:'flex', gap:12, flexWrap:'wrap'}}>
-                {[['#3B1F0A','Espresso'],['#8B5C2A','Roast'],['#C49060','Caramel'],['#F5EDE0','Linen'],['#0D0B09','Midnight']].map(([c,n]) => (
-                  <div key={n} style={{display:'flex',alignItems:'center',gap:8}}>
-                    <div style={{width:28,height:28,borderRadius:8,background:c,border:'1px solid rgba(255,255,255,0.12)'}} />
-                    <span style={{fontSize:11,color:'rgba(240,235,227,0.45)',fontFamily:'Space Grotesk, sans-serif'}}>{n}</span>
-                  </div>
-                ))}
+              <div style={{marginTop:40}}>
+                <h3 style={{fontSize:'1rem', marginBottom:16, color:'rgba(240,235,227,0.9)', fontFamily:'Space Grotesk, sans-serif'}}>Brand Palette &amp; HEX Codes</h3>
+                <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(140px, 1fr))', gap:20, marginBottom:24}}>
+                  {[
+                    ['#3B1F0A','Espresso','Deepest base brown, represents the intensity and quality of the beans.'],
+                    ['#8B5C2A','Roast','Warm mid-tone, adding depth and that classic roasted coffee feel.'],
+                    ['#C49060','Caramel','Accent color, representing smooth texture and approachable flavor.'],
+                    ['#F5EDE0','Linen','Primary canvas color, replaces clinical white with a soft, natural organic feel.'],
+                    ['#0D0B09','Midnight','Used for high-contrast typography, cleaner and more modern than pure black.']
+                  ].map(([c,n,r]) => (
+                    <div key={n} style={{background:'rgba(255,255,255,0.03)', padding:12, borderRadius:12, border:'1px solid rgba(255,255,255,0.05)'}}>
+                      <div style={{width:'100%', height:40, borderRadius:6, background:c, marginBottom:10, border:'1px solid rgba(255,255,255,0.1)'}} />
+                      <div style={{fontWeight:700, fontSize:13, color:'#fff'}}>{n}</div>
+                      <div style={{fontSize:11, color:'rgba(255,255,255,0.4)', fontFamily:'monospace', marginBottom:6}}>{c}</div>
+                      <div style={{fontSize:10, color:'rgba(255,255,255,0.5)', lineHeight:1.4}}>{r}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
@@ -107,14 +117,14 @@ export default function BeafitPage() {
           <div className="divider" />
           <motion.div className="position-block" initial={{ opacity:0, y:30 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.7 }}>
             <p className="position-quote">
-              "The Beanfit is not just a drink — it's the intersection of specialty coffee culture and functional nutrition, 
-              designed for a generation that doesn't compromise on either."
+              "The Beanfit is not just another drink. It's the exact intersection of specialty coffee culture and functional nutrition, 
+              designed entirely for a generation that refuses to compromise on either."
             </p>
             <p style={{ color:'rgba(240,235,227,0.55)', fontSize:'0.95rem', lineHeight:1.8, maxWidth:660 }}>
-              We sit at the crossroads of two fast-growing markets: <strong style={{color:'rgba(240,235,227,0.85)'}}>premium coffee</strong> and 
-              <strong style={{color:'rgba(240,235,227,0.85)'}}> protein nutrition</strong>. Our target audience is Gen-Z and millennial 
-              coffee addicts, gym-goers, and busy professionals who struggle to hit their daily protein goals without 
-              the hassle of extra prep. The Beanfit makes hitting 15g of protein as natural as your morning brew.
+              We sit right at the crossroads of two incredibly fast-growing markets: <strong style={{color:'rgba(240,235,227,0.85)'}}>premium coffee</strong> and 
+              <strong style={{color:'rgba(240,235,227,0.85)'}}> protein nutrition</strong>. The target audience includes Gen-Z and millennial 
+              coffee addicts, gym-goers, and busy professionals who continually struggle to hit their daily protein goals without 
+              the headache of extra prep work. The Beanfit aims to make hitting 15g of protein feel as natural and easy as making your morning brew.
             </p>
             <div className="position-pillars">
               {['Functional Nutrition','Specialty Coffee','Clean Ingredients','15g Protein','No Compromise','Premium Taste'].map(p => (
@@ -166,17 +176,17 @@ export default function BeafitPage() {
               <div className="divider" />
               <h2 className="section-title">Built Different. Brewed Right.</h2>
               <p className="section-desc">
-                Not an energy drink. Not a protein shake. A category entirely its own — 
-                <em> Protein Coffee</em>. Here's how The Beanfit goes to market.
+                This isn't an energy drink and it definitely isn't a standard protein shake. It's a category entirely its own:
+                <em> Protein Coffee</em>. Here is how The Beanfit intends to go to market.
               </p>
             </motion.div>
             <motion.div initial={{opacity:0,x:30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.6}}>
               {[
-                { title:'Product Strategy – The Sachet Advantage', body:'Individual sachets eliminate the friction of carrying tubs. Each sachet = one perfect serving. Formats: Original Black, Creamy Latte, Mocha Fuel, Cold Brew Vanilla. Future seasonal drops (pumpkin spice, matcha protein) to keep the brand culturally alive.' },
-                { title:'Pricing Strategy – Premium-Accessible', body:'Priced at ₹60–₹85 per sachet (₹799–₹999 for packs of 10+12). Not cheap, not luxury — firmly in the "affordable premium" zone. Comparable to ordering a specialty coffee but with protein built in.' },
-                { title:'Distribution Strategy – Where Gen-Z Actually Shops', body:'D2C website, Zomato Hyperpure, quick commerce (Blinkit, Swiggy Instamart), and partnerships with gyms and co-working spaces. Offline sampling kiosks in college campuses and gyms for trial.' },
-                { title:'Communication Strategy – Anti-Corporate Tone', body:'Copywriting that sounds like a friend, not a brand. No fake science. No loud shouty claims. Dry humour, honest macros, real people. Instagram-first, with Reels showcasing the "30-second ritual".' },
-                { title:'Flavour Innovation Strategy – Trend-Led Drops', body:'Beyond the core 4: limited-edition flavours tied to cultural moments. Rose protein latte for Valentine\'s. Mango cold brew for summer. Keeps the product in conversations even off-season.' },
+                { title:'Product Strategy', body:'Individual sachets entirely eliminate the friction of carrying bulky tubs. Every sachet provides exactly one perfect serving. Core formats will include Original Black, Creamy Latte, Mocha Fuel, and Cold Brew Vanilla. We will also release seasonal drops like pumpkin spice or matcha protein to ensure the brand stays culturally alive.' },
+                { title:'Pricing Strategy', body:'The product will be priced at ₹60 to ₹85 per sachet, translating to ₹799 to ₹999 for packs of 10 or 12. It is not cheap and not pure luxury. It sits firmly in the accessible premium zone, making it comparable to ordering a specialty coffee but with a massive protein benefit built right in.' },
+                { title:'Distribution Strategy', body:'We target places where Indian Gen-Z genuinely shops. This means a strong D2C website, quick commerce platforms like Blinkit, Zepto, and Swiggy Instamart, and strategic partnerships with premium gyms and co-working spaces. We also plan offline sampling kiosks in college campuses for easy first trials.' },
+                { title:'Communication', body:'Our copy sounds like your funniest friend who also happens to meal-prep. We lean heavily into meme-native content and continuous collab drops with rapidly rising fitness creators. We focus on real reviews instead of staged studio selfies and push heavily on Instagram Reels and YouTube Shorts.' },
+                { title:'Flavour Innovation', body:'We plan highly collaborative drops with local Indian roasters for limited single-origin protein editions. We also create massive seasonal hype with a Summer Mango series or a deliberate "Post-Gym Chai" protein collection. Flavour votes happen directly on Instagram Stories where the audience decides what drops next.' },
               ].map((s, i) => (
                 <motion.div className="strategy-step" key={s.title} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.1}}>
                   <div className="step-num">{String(i+1).padStart(2,'0')}</div>
@@ -203,14 +213,13 @@ export default function BeafitPage() {
             <motion.div className="dos-box" initial={{opacity:0,x:-20}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.5}}>
               <h3>✓ Do's</h3>
               {[
-                'Use earthy, warm tones — espresso brown, cream, clay, slate.',
-                'Write copy like a real person. Wit over jargon.',
-                'Lead with taste and convenience, support with nutrition facts.',
-                'Show real people. Gyms, desks, trains, kitchens.',
-                'Create limited seasonal flavours to stay culturally relevant.',
-                'Partner with micro-influencers who genuinely care about what they consume.',
-                'Make the sachet the hero — it\'s portable, instagrammable, zero-mess.',
-                'Use QR codes on pack for recipe ideas and community content.',
+                'Use earthy and warm tones like espresso brown, cream, clay, and slate.',
+                'Write copy naturally like a real person and prioritise wit over corporate jargon.',
+                'Lead the messaging with taste and convenience while letting the nutrition facts act as strong support.',
+                'Show real people in their actual environments like gyms, desks, trains, and home kitchens.',
+                'Create limited seasonal flavours to make sure the brand stays culturally relevant.',
+                'Partner closely with genuine micro-influencers who actually care about the things they consume.',
+                'Make the sachet the hero of the content because it is highly portable and zero-mess.',
               ].map(d => (
                 <div className="dd-item" key={d}><span className="dd-check">✓</span><span>{d}</span></div>
               ))}
@@ -218,14 +227,13 @@ export default function BeafitPage() {
             <motion.div className="donts-box" initial={{opacity:0,x:20}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.5}}>
               <h3>✕ Don'ts</h3>
               {[
-                'Don\'t use overly clinical language or fake-science claims.',
-                'Don\'t go all-out neon or "protein bro" aesthetic — we\'re not a sports drink.',
-                'Don\'t ignore coffee culture — it\'s half the brand DNA.',
-                'Don\'t discount heavily — it kills premium perception.',
-                'Don\'t use stock photos of people lifting in perfect studios.',
-                'Don\'t launch 12 flavours at once — limited drops create FOMO.',
-                'Don\'t hide the protein content — it\'s a feature, not a footnote.',
-                'Don\'t try to appeal to everyone — the niche is the strength.',
+                'Avoid using overly clinical language or completely fake science claims.',
+                'Avoid going all out with neon colours or a generic gym bro aesthetic because we are not a sports energy drink.',
+                'Never ignore coffee culture because it makes up half of the brand DNA.',
+                'Avoid discounting heavily as it immediately kills the premium perception of the product.',
+                'Stay away from perfect stock photos of people lifting weights in spotless studios.',
+                'Avoid launching a dozen flavours all at once. Spread them out to create excitement.',
+                'Never try to hide the protein content. It is a major feature and should proudly be displayed.',
               ].map(d => (
                 <div className="dd-item" key={d}><span className="dd-cross">✕</span><span>{d}</span></div>
               ))}
@@ -237,24 +245,83 @@ export default function BeafitPage() {
       {/* ── PACKAGING ── */}
       <section className="section" id="packaging">
         <div className="container">
-          <motion.span className="eyebrow" initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}}>Packaging Vision</motion.span>
+          <motion.span className="eyebrow" initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}}>Packaging Vision &amp; Mockups</motion.span>
           <div className="divider" />
           <motion.h2 className="section-title" style={{marginBottom:12}} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
             The Sachet is the Product.
           </motion.h2>
           <motion.p className="section-desc" style={{marginBottom:48}} initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}}>
-            Two colourways — a rich espresso dark edition and a clean linen light edition. 
-            Both designed to look good on your kitchen counter, your gym bag, and your Instagram feed.
+            We designed the packaging to look seamless whether it's sitting on your kitchen counter, tucked in your gym bag, or featured on your Instagram feed. The lineup consists of our rich espresso dark edition and the soft linen light edition. Here is an expanded look at the product family.
           </motion.p>
-          <div className="pack-grid">
-            <motion.div className="pack-item" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:0}} whileHover={{scale:1.01}}>
-              <img src="/beanfit-dark.png" alt="The Beanfit Dark Edition" className="pack-img" />
-              <div className="pack-label">Dark Edition — Espresso Series</div>
-            </motion.div>
-            <motion.div className="pack-item" initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:0.15}} whileHover={{scale:1.01}}>
-              <img src="/beanfit-light.png" alt="The Beanfit Light Edition" className="pack-img" />
-              <div className="pack-label">Light Edition — Linen Series</div>
-            </motion.div>
+          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(260px, 1fr))', gap:32}}>
+            {[
+              {
+                img: '/beanfit-dark.png',
+                label: 'Dark Edition',
+                sub: 'Espresso Black Series',
+                bg: '#1a0f06',
+                border: '1px solid rgba(140,80,30,0.3)',
+                imgStyle: { filter:'none', transform:'scale(1.05) translateY(-4px)' },
+                badge: '#8B5C2A'
+              },
+              {
+                img: '/beanfit-light.png',
+                label: 'Light Edition',
+                sub: 'Linen Series',
+                bg: '#f0e6d3',
+                border: '1px solid rgba(0,0,0,0.08)',
+                imgStyle: { filter:'brightness(1.05) saturate(0.9)', transform:'scale(0.98) rotate(-1deg)' },
+                badge: '#C49060',
+                light: true
+              },
+              {
+                img: '/beanfit-dark.png',
+                label: 'Mocha Fuel',
+                sub: 'Limited Edition',
+                bg: '#0d1a0f',
+                border: '1px solid rgba(80,140,60,0.2)',
+                imgStyle: { filter:'sepia(0.4) hue-rotate(-15deg) saturate(1.3) brightness(0.85)', transform:'scale(1.08) rotate(2deg)' },
+                badge: '#4a7c3f'
+              },
+              {
+                img: '/beanfit-light.png',
+                label: 'Cold Brew Vanilla',
+                sub: 'Summer Edition',
+                bg: '#1a150a',
+                border: '1px solid rgba(200,160,80,0.25)',
+                imgStyle: { filter:'sepia(0.6) saturate(1.5) brightness(0.9) hue-rotate(20deg)', transform:'scale(1.04) rotate(-2deg)' },
+                badge: '#C8A050'
+              },
+            ].map((p, i) => (
+              <motion.div key={i}
+                initial={{opacity:0, y:24}} whileInView={{opacity:1, y:0}}
+                viewport={{once:true}} transition={{delay:i*0.1}}
+                whileHover={{scale:1.02, y:-4}}
+                style={{
+                  background: p.bg,
+                  border: p.border,
+                  borderRadius: 20,
+                  overflow: 'hidden',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.35)'
+                }}
+              >
+                <div style={{padding:'32px 24px 16px', display:'flex', justifyContent:'center'}}>
+                  <img src={p.img} alt={p.label} style={{ width:'75%', maxWidth:200, ...p.imgStyle, transition:'transform 0.4s ease' }} />
+                </div>
+                <div style={{padding:'0 20px 24px'}}>
+                  <div style={{
+                    display:'inline-block',
+                    background: p.badge + '22',
+                    border: `1px solid ${p.badge}44`,
+                    color: p.badge,
+                    fontSize:10, fontWeight:700, letterSpacing:'0.1em',
+                    padding:'3px 10px', borderRadius:999, marginBottom:8,
+                    fontFamily:'Space Grotesk, sans-serif'
+                  }}>{p.sub}</div>
+                  <div style={{ fontWeight:700, fontSize:'1rem', color: p.light ? '#3B1F0A' : '#f0e6d3', fontFamily:'Space Grotesk, sans-serif' }}>{p.label}</div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
